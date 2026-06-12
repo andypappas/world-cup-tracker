@@ -8,10 +8,16 @@ def main():
 
     matches = pd.read_csv("data/matches.csv")
 
+
     team_filter = st.selectbox(
-        "Filter by team",
-        ["All"] + sorted(set(matches["home_team"]) | set(matches["away_team"]))
-        )
+    "Filter by team",
+    ["All"] + sorted(set(matches["home_team"]) | set(matches["away_team"]))
+    )
+
+    group_filter = st.selectbox(
+    "Filter by group",
+    ["All"] + sorted(matches["group"].unique())
+    )
 
     if team_filter != "All":
         matches = matches[
@@ -19,7 +25,26 @@ def main():
             (matches["away_team"] == team_filter)
             ]
 
-    st.dataframe(matches, width='stretch')
+    if group_filter != "All":
+        matches = matches[
+            (matches["group"] == group_filter)
+            ]
+
+    upcoming = matches[matches["status"] == "Upcoming"]
+    finished = matches[matches["status"] == "Finished"]
+
+
+    tab1, tab2, = st.tabs(["Upcoming", "Finished"], width='stretch')
+
+    with tab1:
+        st.header("Upcoming Matches")
+        st.dataframe(upcoming, width='stretch')
+
+    with tab2:
+
+        st.header("Finished Matches")
+        st.dataframe(finished, width='stretch')
+
 
 
 if __name__ == "__main__":
