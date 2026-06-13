@@ -1,32 +1,21 @@
 from wct.data_loader import *
 from wct.constants import *
-import argparse
 
 
 def main():
 
-    parser = argparse.ArgumentParser(
-            prog="World Cup Tracker",
-            description="Tracks the 2026 World Cup Standings",
-            epilog="Text at bottom of help lol"
-            )
+    home_team = input("Enter home team: ")
+    away_team = input("Enter away team: ")
+    home_team_goals = int(input(f"{home_team} goals: "))
+    away_team_goals = int(input(f"{away_team} goals: "))
 
-    parser.add_argument("-t", "--home-team",
-                        required=True,
-                        )
-    parser.add_argument("-a", "--away-team",
-                        required=True,
-                        )
-
-    args = parser.parse_args()
-    home_team = args.home_team
-    away_team = args.away_team
-    
     matches = import_data(PATH_TO_MATCH_SCHEDULE)
 
     print(matches)
     print(f"Home Team: {home_team}")
     print(f"Away Team: {away_team}")
+    print(f"{home_team} goals: {home_team_goals}")
+    print(f"{away_team} goals: {away_team_goals}")
 
 
 if __name__ == "__main__":
