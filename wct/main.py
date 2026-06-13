@@ -1,5 +1,5 @@
-from src.data_loader import *
-from src.constants import *
+from wct.data_loader import *
+from wct.constants import *
 import argparse
 
 
