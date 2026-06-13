@@ -8,3 +8,6 @@ dependencies = [
     "pandas>=3.0.3",
     "streamlit>=1.58.0",
 ]
+
+[project.scripts]
+wct = "wct.main:main"
