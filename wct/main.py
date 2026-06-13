@@ -4,9 +4,6 @@ import argparse
 
 
 def main():
-    
-    matches = import_data(PATH_TO_MATCH_SCHEDULE)
-    print(matches)
 
     parser = argparse.ArgumentParser(
             prog="World Cup Tracker",
@@ -24,6 +21,10 @@ def main():
     args = parser.parse_args()
     home_team = args.home_team
     away_team = args.away_team
+    
+    matches = import_data(PATH_TO_MATCH_SCHEDULE)
+
+    print(matches)
     print(f"Home Team: {home_team}")
     print(f"Away Team: {away_team}")
 
