@@ -17,12 +17,12 @@ def main():
     home_points = int(input(f"How many goals did {home_team} score? "))
     away_points = int(input(f"How many goals did {away_team} score? "))
 
-    group_matches.loc[match_select, home_team] += home_points
-    group_matches.loc[match_select, away_team] += away_points
+    group_matches.loc[match_select, "Home Score"] += home_points
+    group_matches.loc[match_select, "Away Score"] += away_points
     group_matches.loc[match_select, "Status"] = "Finished"
 
     print("Successfully updated match")
-    print(group_matches[group_matches["Match Number"] == match_select])
+    print(group_matches[group_matches.index == match_select])
     #group_matches = update_match(match_select)
     #print(group_matches)
 
