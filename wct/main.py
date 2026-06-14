@@ -1,28 +1,31 @@
-from wct.data_loader import *
 from wct.constants import *
 from wct.standings import *
 
 
 def main():
 
-    group_matches = import_data(PATH_TO_GROUP_MATCHES)
+    group_matches = pd.read_csv(PATH_TO_GROUP_MATCHES, index_col="Match Number")
     group_matches = group_matches.astype({
         "Home Score": "int8",
         "Away Score": "int8"
         })
+    print(group_matches[group_matches["Status"] != "Finished"])
+    match_select = int(input("Choose a match number to update: "))
+    home_team = group_matches.loc[match_select, "Home Team"]
+    away_team = group_matches.loc[match_select, "Away Team"]
+    print(f"You have chosen to update the match between {home_team} and {away_team}.")
+    home_points = int(input(f"How many goals did {home_team} score? "))
+    away_points = int(input(f"How many goals did {away_team} score? "))
 
-    group_standings = import_data(PATH_TO_GROUP_STANDINGS)
+    group_matches.loc[match_select, home_team] += home_points
+    group_matches.loc[match_select, away_team] += away_points
+    group_matches.loc[match_select, "Status"] = "Finished"
 
-    home_team = input("Enter home team: ")
-    away_team = input("Enter away team: ")
-    home_team_goals = int(input(f"{home_team} goals: "))
-    away_team_goals = int(input(f"{away_team} goals: "))
+    print("Successfully updated match")
+    print(group_matches[group_matches["Match Number"] == match_select])
+    #group_matches = update_match(match_select)
+    #print(group_matches)
 
-    group_matches = update_match(group_matches, home_team, away_team, home_team_goals, away_team_goals)
-    print(group_matches)
-
-    for team in group_standings["Team"]:
-        calculate_standings(group_standings)
 
 if __name__ == "__main__":
     main()
