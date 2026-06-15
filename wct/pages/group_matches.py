@@ -3,6 +3,7 @@ from wct.data_loader import save_group_stage_matches
 from wct.matches import update_finished_group_match
 from wct.data_loader import load_group_stage_matches
 import streamlit as st
+import pandas as pd
 
 
 def render_group_matches_page():
@@ -50,9 +51,11 @@ def render_group_matches_page():
             away_team = group_matches.loc[match_select, "Away Team"]
 
             if submitted:
-                group_matches = update_finished_group_match(group_matches, match_select, home_team, away_team, home_points, away_points)
+                group_matches = update_finished_group_match(group_matches, match_select, home_points, away_points)
                 update_group_standings(home_team, away_team, home_points, away_points)
                 save_group_stage_matches(group_matches)
+
+                st.success(f"{home_team}: {home_points}\n{away_team}: {away_points}")
 
     with tab2:
         st.header("Finished Matches")
