@@ -33,25 +33,30 @@ def render_group_matches_page():
             (group_matches["Group"] == group_filter)
         ]
 
-    upcoming = group_matches[group_matches["Status"] == "Upcoming"]
-    finished = group_matches[group_matches["Status"] == "Finished"]
-
     tab1, tab2, = st.tabs(["Upcoming", "Finished"], width='stretch')
 
     with tab1:
         st.header("Upcoming Matches")
-        st.dataframe(upcoming, width='stretch')
+        st.dataframe(group_matches[group_matches["Status"] == "Upcoming"], width='stretch')
 
         with st.form("user_form"):
-            match_select = st.number_input("Select match", min_value=1)
+            match_select = st.number_input(
+                    "Select match",
+                    min_value=1,
+                    max_value=len(group_matches),
+                    step=1
+                    )
             home_points = st.number_input("Home team score", min_value=0)
             away_points = st.number_input("Away team score", min_value=0)
             submitted = st.form_submit_button("Submit")
-            home_team = group_matches.loc[match_select, "Home Team"]
-            away_team = group_matches.loc[match_select, "Away Team"]
 
             if submitted:
-                group_matches = update_finished_group_match(group_matches, match_select, home_points, away_points)
+                match_idx = group_matches.index[match_select - 1]
+
+                home_team = group_matches.loc[match_idx, "Home Team"]
+                away_team = group_matches.loc[match_idx, "Away Team"]
+
+                group_matches = update_finished_group_match(group_matches, match_idx, home_points, away_points)
                 update_group_standings(home_team, away_team, home_points, away_points)
                 save_group_stage_matches(group_matches)
 
@@ -59,4 +64,4 @@ def render_group_matches_page():
 
     with tab2:
         st.header("Finished Matches")
-        st.dataframe(finished, width='stretch')
+        st.dataframe(group_matches[group_matches["Status"] == "Finished"], width='stretch')
