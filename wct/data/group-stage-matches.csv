@@ -1,0 +1,73 @@
+Match ID,Date,Group,Home Team,Away Team,Home Score,Away Score,Status
+1,2026-06-11,A,Mexico,South Africa,0,0,Upcoming
+2,2026-06-11,A,South Korea,Czechia,0,0,Upcoming
+3,2026-06-12,B,Canada,Bosnia and Herzegovina,0,0,Upcoming
+4,2026-06-12,D,United States,Paraguay,0,0,Upcoming
+5,2026-06-13,B,Qatar,Switzerland,0,0,Upcoming
+6,2026-06-13,C,Brazil,Morocco,0,0,Upcoming
+7,2026-06-13,C,Haiti,Scotland,0,0,Upcoming
+8,2026-06-13,D,Australia,Turkey,0,0,Upcoming
+9,2026-06-14,E,Germany,Curacao,0,0,Upcoming
+10,2026-06-14,F,Netherlands,Japan,0,0,Upcoming
+11,2026-06-14,E,Ivory Coast,Ecuador,0,0,Upcoming
+12,2026-06-14,F,Sweden,Tunisia,0,0,Upcoming
+13,2026-06-15,H,Spain,Cape Verde,0,0,Upcoming
+14,2026-06-15,G,Belgium,Egypt,0,0,Upcoming
+15,2026-06-15,H,Saudi Arabia,Uruguay,0,0,Upcoming
+16,2026-06-15,G,Iran,New Zealand,0,0,Upcoming
+17,2026-06-16,I,France,Senegal,0,0,Upcoming
+18,2026-06-16,I,Iraq,Norway,0,0,Upcoming
+19,2026-06-16,J,Argentina,Algeria,0,0,Upcoming
+20,2026-06-16,J,Austria,Jordan,0,0,Upcoming
+21,2026-06-17,K,Portugal,Congo,0,0,Upcoming
+22,2026-06-17,L,England,Croatia,0,0,Upcoming
+23,2026-06-17,L,Ghana,Panama,0,0,Upcoming
+24,2026-06-17,K,Uzbekistan,Colombia,0,0,Upcoming
+25,2026-06-18,A,Czechia,South Africa,0,0,Upcoming
+26,2026-06-18,B,Switzerland,Bosnia and Herzegovina,0,0,Upcoming
+27,2026-06-18,B,Canada,Qatar,0,0,Upcoming
+28,2026-06-18,A,Mexico,South Korea,0,0,Upcoming
+29,2026-06-19,D,United States,Australia,0,0,Upcoming
+30,2026-06-19,C,Scotland,Morocco,0,0,Upcoming
+31,2026-06-19,C,Brazil,Haiti,0,0,Upcoming
+32,2026-06-19,D,Turkey,Paraguay,0,0,Upcoming
+33,2026-06-20,F,Netherlands,Sweden,0,0,Upcoming
+34,2026-06-20,E,Germany,Ivory Coast,0,0,Upcoming
+35,2026-06-20,E,Ecuador,Curacao,0,0,Upcoming
+36,2026-06-20,F,Tunisia,Japan,0,0,Upcoming
+37,2026-06-21,H,Spain,Saudi Arabia,0,0,Upcoming
+38,2026-06-21,G,Belgium,Iran,0,0,Upcoming
+39,2026-06-21,H,Uruguay,Cape Verde,0,0,Upcoming
+40,2026-06-21,G,New Zealand,Egypt,0,0,Upcoming
+41,2026-06-22,J,Argentina,Austria,0,0,Upcoming
+42,2026-06-22,I,France,Iraq,0,0,Upcoming
+43,2026-06-22,I,Norway,Senegal,0,0,Upcoming
+44,2026-06-22,J,Jordan,Algeria,0,0,Upcoming
+45,2026-06-23,K,Portugal,Uzbekistan,0,0,Upcoming
+46,2026-06-23,L,England,Ghana,0,0,Upcoming
+47,2026-06-23,L,Panama,Croatia,0,0,Upcoming
+48,2026-06-23,K,Colombia,Congo,0,0,Upcoming
+49,2026-06-24,B,Switzerland,Canada,0,0,Upcoming
+50,2026-06-24,B,Bosnia and Herzegovina,Qatar,0,0,Upcoming
+51,2026-06-24,C,Morocco,Haiti,0,0,Upcoming
+52,2026-06-24,C,Scotland,Brazil,0,0,Upcoming
+53,2026-06-24,A,South Africa,South Korea,0,0,Upcoming
+54,2026-06-24,A,Czechia,Mexico,0,0,Upcoming
+55,2026-06-25,E,Curacao,Ivory Coast,0,0,Upcoming
+56,2026-06-25,E,Ecuador,Germany,0,0,Upcoming
+57,2026-06-25,F,Tunisia,Netherlands,0,0,Upcoming
+58,2026-06-25,F,Japan,Sweden,0,0,Upcoming
+59,2026-06-25,D,Turkey,United States,0,0,Upcoming
+60,2026-06-25,D,Paraguay,Australia,0,0,Upcoming
+61,2026-06-26,I,Norway,France,0,0,Upcoming
+62,2026-06-26,I,Senegal,Iraq,0,0,Upcoming
+63,2026-06-26,H,Cape Verde,Saudi Arabia,0,0,Upcoming
+64,2026-06-26,H,Uruguay,Spain,0,0,Upcoming
+65,2026-06-26,G,New Zealand,Belgium,0,0,Upcoming
+66,2026-06-26,G,Egypt,Iran,0,0,Upcoming
+67,2026-06-27,L,Panama,England,0,0,Upcoming
+68,2026-06-27,L,Croatia,Ghana,0,0,Upcoming
+69,2026-06-27,K,Colombia,Portugal,0,0,Upcoming
+70,2026-06-27,K,Congo,Uzbekistan,0,0,Upcoming
+71,2026-06-27,J,Algeria,Austria,0,0,Upcoming
+72,2026-06-27,J,Jordan,Argentina,0,0,Upcoming
