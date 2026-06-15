@@ -35,13 +35,11 @@ def update_group_standings(team1, team2, score1, score2):
     save_group_standings(df)
 
 
-def sort_group_standings():
-    df = load_group_stage_standings()
+def sort_group_standings(df):
 
     df = df.sort_values(
         ["Group", "Points", "Goal Difference", "Goals For", "Goals Against"],
         ascending=[True, False, False, False, True]
         )
     df["Rank"] = df.groupby("Group").cumcount() + 1
-
-    save_group_standings(df)
+    return df

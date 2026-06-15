@@ -1,3 +1,4 @@
+from wct.standings import sort_group_standings
 from requests.models import stream_decode_response_unicode
 from wct.data_loader import load_group_stage_standings
 import streamlit as st
@@ -7,7 +8,8 @@ def render_group_standings_page():
     st.title("Group Stage Standings")
 
     group_standings = load_group_stage_standings()
-    
+    group_standings = sort_group_standings(group_standings)
+
     tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12 = (
         st.tabs(["Group A", "Group B", "Group C", "Group D", "Group E", "Group F",
         "Group G", "Group H", "Group I", "Group J", "Group K", "Group L"], width='stretch')
